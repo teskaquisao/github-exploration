@@ -11,7 +11,7 @@ body:
         ## Development Task
         Use this template for standard development work that isn't a bug fix or new feature.
 
-- type: dropdown
+  - type: dropdown
     id: task-type
     attributes:
       label: Task Type
