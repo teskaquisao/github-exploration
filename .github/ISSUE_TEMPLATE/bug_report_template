@@ -1,0 +1,93 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[BUG]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        Thanks for taking the time to fill out this bug report. The more information you provide, the faster we can address the issue.
+
+  - type: input
+    id: affected-version
+    attributes:
+      label: Affected Version
+      description: What version of our software are you using?
+      placeholder: "v1.2.3"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Where does this issue occur?
+      options:
+        - Production
+        - Staging
+        - Development
+        - Local Environment
+        - All
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide a clear and concise description of the bug
+      placeholder: When I click on X, Y happens instead of Z...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue? Please be as detailed as possible.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: I expected X to occur...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: Paste or drag-and-drop screenshots here
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: Please copy and paste any relevant log output. This will be automatically formatted as code.
+      render: shell
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact Level
+      description: How severely does this bug affect users?
+      options:
+        - Critical - Production is down/unusable
+        - High - Major functionality broken
+        - Medium - Feature partially broken
+        - Low - Minor issue or UI glitch
+    validations:
+      required: false
