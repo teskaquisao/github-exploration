@@ -1,0 +1,23 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Medprojects Support
+    url: https://medprojects.com/support
+    about: Please contact our support team for questions that aren't related to development tasks, bugs, features, or documentation.
+
+# This file configures the issue template chooser that appears when creating a new issue
+# The order here determines the order in the template selector
+
+# Template order in the selector will be:
+# 1. General Dev Task (default)
+# 2. Bug Report
+# 3. Feature Request  
+# 4. Technical Debt
+# 5. Documentation Task
+
+template-chooser:
+  order:
+    - 'general_dev_task.yml'
+    - 'bug_report_template.yml'
+    - 'feature_request_template.yml'
+    - 'technical_debt_template.yml'
+    - 'documentation_task_template.yml'
