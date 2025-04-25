@@ -1,4 +1,4 @@
-name: General Development Task
+name: "General Development Task"
 description: Track standard development work that isn't a bug or feature request
 title: "[DEV] "
 labels: []
