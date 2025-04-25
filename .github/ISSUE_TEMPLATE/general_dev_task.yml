@@ -1,0 +1,117 @@
+name: General Development Task
+description: Task that may involve work in the frontend and events for backend
+title: "[FEATURE]: "
+labels: []
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## General Development Task
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the solution you'd like to see implemented
+      placeholder: I would like to see [...]
+    validations:
+      required: false
+
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: User Stories
+      description: Please provide user stories that would be fulfilled by this feature
+      placeholder: |
+        As a [type of user], I want [some goal] so that [some reason].
+        
+        Examples:
+        - As a customer, I want to save my payment methods so that I don't have to re-enter them for each purchase.
+        - As an admin, I want to see failed login attempts so that I can monitor for suspicious activity.
+    validations:
+      required: false
+
+  - type: textarea
+    id: ui-notes
+    attributes:
+      label: User Interface Notes
+      description: Please provide information, descriptions, notes, and other documentation on the user interface and its desired look or behavior.
+      placeholder: |
+        Wireframe Link/s:
+        Field Specifications:
+    validations:
+      required: false
+
+  - type: textarea
+    id: actions-events
+    attributes:
+      label: Actions and Events
+      description: Please provide information, descriptions, notes, and other documentation on actions that the user can do and the events associated with those actions.
+      placeholder: |
+        Action A
+        - When the user clicks... then the system should...
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What conditions must be met for this feature to be considered complete?
+      placeholder: |
+        - The system must allow users to...
+        - The feature should handle the case when...
+        - Performance should not degrade by more than...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Perceived Priority
+      description: How important do you think this feature is?
+      options:
+        - Critical (needed for core functionality)
+        - High (significant improvement to existing functionality)
+        - Medium (useful enhancement)
+        - Low (nice to have)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated Effort
+      description: If you have technical knowledge, how complex do you think this would be to implement?
+      options:
+        - Unknown
+        - Small (hours)
+        - Medium (days)
+        - Large (weeks)
+        - Extra Large (months)
+
+  - type: dropdown
+    id: stakeholders
+    attributes:
+      label: Stakeholders
+      description: Which teams or user groups would benefit from this feature?
+      multiple: true
+      options:
+        - Customers
+        - Internal Users
+        - Developers
+        - Operations
+        - Marketing
+        - Finance
+        - Sales
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, mockups, or screenshots about the feature request here.
+      placeholder: Add any other relevant details here.
