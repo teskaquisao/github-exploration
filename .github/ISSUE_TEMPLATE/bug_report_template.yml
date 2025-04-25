@@ -25,6 +25,7 @@ body:
     attributes:
       label: Environment
       description: Where does this issue occur?
+      multiple: true
       options:
         - Production
         - Staging
