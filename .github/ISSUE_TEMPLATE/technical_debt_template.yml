@@ -1,0 +1,121 @@
+name: Technical Debt
+description: Document and track technical debt that needs to be addressed
+title: "[TECH-DEBT]: "
+labels: ["technical-debt", "refactoring"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Technical Debt Report
+        Use this template to document technical debt that should be addressed to improve code quality, performance, or maintainability.
+
+  - type: input
+    id: affected-components
+    attributes:
+      label: Affected Components
+      description: Which components, services, or modules are affected?
+      placeholder: "Authentication Service, User API, Database Schema"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of Technical Debt
+      description: Describe the current implementation and why it's considered technical debt
+      placeholder: |
+        The authentication service currently uses a custom encryption method instead of industry standards...
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Current Impact
+      description: How is this technical debt affecting development, performance, or reliability?
+      placeholder: |
+        - Slows down new feature development in related areas
+        - Causes intermittent failures under high load
+        - Makes testing difficult
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks if Not Addressed
+      description: What are the potential future consequences if this debt remains?
+      placeholder: |
+        - May cause security vulnerabilities
+        - Will become more expensive to fix as dependent systems grow
+        - Could lead to system outages as scale increases
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How would you recommend addressing this technical debt?
+      placeholder: |
+        Replace custom encryption with industry-standard libraries and update all dependent services...
+    validations:
+      required: true
+
+  - type: textarea
+    id: code-references
+    attributes:
+      label: Code References
+      description: Links to relevant code or specific files/lines that need attention
+      placeholder: |
+        - `src/services/auth/encryption.js`
+        - Line 42-87 in `AuthenticationProvider.js`
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Remediation Difficulty
+      description: How difficult would it be to address this debt?
+      options:
+        - Easy (can be done in a day)
+        - Medium (requires several days of focused work)
+        - Hard (requires significant refactoring)
+        - Very Hard (requires architectural changes)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How urgent is it to address this debt?
+      options:
+        - Critical (blocking progress or causing failures)
+        - High (significantly impacting development)
+        - Medium (causing regular friction)
+        - Low (minor nuisance)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: test-impact
+    attributes:
+      label: Testing Impact
+      description: How will remediation affect testing needs?
+      options:
+        - Minimal (changes are isolated and easily tested)
+        - Moderate (requires careful regression testing)
+        - Significant (may affect multiple systems)
+    validations:
+      required: true
+
+  - type: textarea
+    id: estimated-effort
+    attributes:
+      label: Estimated Effort
+      description: Roughly how much effort would be required to address this debt?
+      placeholder: "2 developer-weeks including testing and deployment"
+    validations:
+      required: true
