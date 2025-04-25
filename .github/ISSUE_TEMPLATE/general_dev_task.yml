@@ -1,6 +1,6 @@
 name: General Development Task
-description: Task that may involve work in the frontend and events for backend
-title: "[TASK] "
+description: Track standard development work that isn't a bug or feature request
+title: "[DEV] "
 labels: []
 assignees: []
 
@@ -8,14 +8,35 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## General Development Task
+        ## Development Task
+        Use this template for standard development work that isn't a bug fix or new feature.
+
+- type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What type of development task is this?
+      options:
+        - New Feature
+        - Implementation
+        - Refactoring
+        - Performance Optimization
+        - Testing
+        - Integration
+        - Configuration
+        - Dependency Update
+        - Research/Spike
+        - DevOps
+        - Other (specify in description)
+    validations:
+      required: false
 
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Describe the solution you'd like to see implemented
-      placeholder: I would like to see [...]
+      description: Describe what needs to be done
+      placeholder: Implement the user authentication flow using OAuth...
     validations:
       required: false
 
@@ -65,7 +86,7 @@ body:
         - The feature should handle the case when...
         - Performance should not degrade by more than...
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: priority
@@ -78,7 +99,7 @@ body:
         - Medium (useful enhancement)
         - Low (nice to have)
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: effort
@@ -91,23 +112,6 @@ body:
         - Medium (days)
         - Large (weeks)
         - Extra Large (months)
-
-  - type: dropdown
-    id: stakeholders
-    attributes:
-      label: Stakeholders
-      description: Which teams or user groups would benefit from this feature?
-      multiple: true
-      options:
-        - Customers
-        - Internal Users
-        - Developers
-        - Operations
-        - Marketing
-        - Finance
-        - Sales
-    validations:
-      required: true
 
   - type: textarea
     id: additional-context
