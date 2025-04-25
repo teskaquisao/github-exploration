@@ -1,0 +1,154 @@
+name: Documentation Task
+description: Create, update, or improve documentation
+title: "[DOCS]: "
+labels: ["documentation"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation Task
+        Use this template for tasks related to creating or updating documentation.
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation is this task for?
+      options:
+        - Product Documentation (User Manual)
+        - API Documentation
+        - Developer Guide
+        - System Architecture
+        - Installation/Setup Guide
+        - Process Documentation
+        - Training Material
+        - Knowledge Base Article
+        - Release Notes
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What needs to be done with this documentation?
+      options:
+        - Create New Documentation
+        - Update Existing Documentation
+        - Review & Approve Documentation
+        - Translate Documentation
+        - Migrate Documentation to New Format/System
+        - Archive Outdated Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe what documentation needs to be created or updated
+      placeholder: |
+        We need to update our API documentation to include the new endpoints added in release v2.3...
+    validations:
+      required: true
+
+  - type: textarea
+    id: content-outline
+    attributes:
+      label: Content Outline or Requirements
+      description: Provide an outline or specific requirements for the documentation
+      placeholder: |
+        The documentation should include:
+        - Overview of the feature
+        - Step-by-step usage instructions
+        - Configuration options
+        - Troubleshooting guide
+        - FAQ section
+
+  - type: textarea
+    id: related-features
+    attributes:
+      label: Related Features or Changes
+      description: What features, code changes, or updates does this documentation relate to?
+      placeholder: |
+        This documentation covers the new payment processing workflow introduced in PR #123
+
+  - type: input
+    id: current-location
+    attributes:
+      label: Current Documentation Location
+      description: For updates, where is the existing documentation located?
+      placeholder: "/docs/api/authentication.md or https://ourcompany.com/docs/api"
+
+  - type: input
+    id: target-location
+    attributes:
+      label: Target Documentation Location
+      description: Where should the completed documentation be published?
+      placeholder: "/docs/api/new-feature.md or Confluence page"
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this documentation?
+      options:
+        - End Users
+        - System Administrators
+        - Developers
+        - Internal Teams
+        - Partners/Integrators
+        - General Public
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Documentation Format
+      description: What format should the documentation be in?
+      options:
+        - Markdown
+        - HTML
+        - PDF
+        - Wiki Page
+        - API Reference (OpenAPI/Swagger)
+        - Code Comments
+        - Video Tutorial
+        - Interactive Guide
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this documentation need?
+      options:
+        - Critical (blocking release)
+        - High (needed for upcoming release)
+        - Medium (important but not time-sensitive)
+        - Low (would be nice to have)
+    validations:
+      required: true
+
+  - type: input
+    id: due-date
+    attributes:
+      label: Requested Completion Date
+      description: When should this documentation be completed by?
+      placeholder: "YYYY-MM-DD"
+
+  - type: textarea
+    id: additional-resources
+    attributes:
+      label: Additional Resources
+      description: Provide links to any resources that would help with creating this documentation
+      placeholder: |
+        - Design documents: [link]
+        - Code repository: [link]
+        - Subject matter experts to consult: [names]
+        - Previous related documentation: [link]
